@@ -1,0 +1,47 @@
+<h2>Material Update</h2>
+
+<form [formGroup] = "materialForm"  (ngSubmit) = "updatematerial()">
+  <div>
+    <label for ="Brand">Brand</label>
+    <input id="Brand" type="text" formControlName="Brand">
+    <span *ngIf="materialForm.get('Brand')?.touched && materialForm.get('Brand')?.errors?.
+    ['required']" class="txt-error">Le champ est requis</span>
+  </div>
+
+  <div>
+    <label for ="Type">Type : </label>
+    <input id = "Type" type ="text" formControlName="Type">
+    <span *ngIf="materialForm.get('Type')?.touched && materialForm.get('Type')?.errors?.
+    ['required']" class="txt-error">Le champ est requis</span>
+  </div>
+
+  <div>
+    <label for ="RegistationNumber"> RegistationNumber : </label>
+    <input id = "RegistationNumber" type ="text" formControlName="RegistationNumber">
+    <span *ngIf="materialForm.get('RegistationNumber')?.touched && materialForm.get('RegistationNumber')?.errors?.
+    ['required']" class="txt-error">Le champ est requis</span>
+  </div>
+
+  <div>
+    <label for ="GrayCardNumber"> GrayCardNumber : </label>
+    <input id = "GrayCardNumber" type ="number" formControlName="GrayCardNumber">
+    <span *ngIf="materialForm.get('GrayCardNumber')?.touched && materialForm.get('GrayCardNumber')?.errors?.
+    ['required']" class="txt-error">Le champ est requis</span>
+  </div>
+
+
+  <div>
+    <label for ="ContractType">ContractType : </label>
+    <input id = "ContractType" type ="ContractType" formControlName="ContractType">
+    <span *ngIf="materialForm.get('ContractType')?.touched && materialForm.get('ContractType')?.errors?.['required']" class="txt-error">Le champ est requis</span>
+  </div>
+
+  <div>
+    <label for ="ContractName">ContractName : </label>
+    <input id = "ContractName" type ="ContractName" formControlName="ContractName">
+    <span *ngIf="materialForm.get('ContractName')?.touched && materialForm.get('ContractName')?.errors?.['ContractName']" class="txt-error">Le champ est requis</span>
+  </div>
+  <div>
+    <input type="submit" value="Update" >
+  </div>
+</form>
